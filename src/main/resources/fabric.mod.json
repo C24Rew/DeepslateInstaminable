@@ -1,0 +1,41 @@
+{
+	"schemaVersion": 1,
+	"id": "deepslate-instaminable",
+	"version": "${version}",
+	"name": "deepslate-instaminable",
+	"description": "A mod that lets you insta mine deepslate block with a netherite tool and haste 2",
+	"authors": [
+		"Me!"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/deepslate-instaminable/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"com.c24rew.Deepslateinstamine"
+		],
+		"client": [
+			"com.c24rew.DeepslateinstamineClient"
+		]
+	},
+	"mixins": [
+		"deepslate-instaminable.mixins.json",
+		{
+			"config": "deepslate-instaminable.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.16.13",
+		"minecraft": "~1.21.5",
+		"java": ">=21",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
